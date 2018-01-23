@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Google Map of HSE</h1>
+
+<div id="map" style="width:1200px;height:800px;"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(39.9699748,-85.9173564);
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcGoPAHU9tNiuHtRiO60fNIfJU-g50xNg&callback=myMap"></script>
+</body>
+</html>
